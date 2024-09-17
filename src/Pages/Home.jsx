@@ -4,17 +4,24 @@ import Scar from '../assets/movie1.jpg'
 import { FaPen } from 'react-icons/fa';
 import { BiComment } from 'react-icons/bi';
 import { FiUser } from 'react-icons/fi';
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div className='w-full h-screen'>
       <nav className='w-full h-50 bg-white border border-b-[#f8f7ff]'>
-        <div className='p-4 mx-5 flex justify-between'>
+        <div className='p-4 mx-5 flex justify-between w-[80%] '>
           <h1 className='text-[#9391ff] text-xl font-extrabold '>Dickson Mo.</h1> 
 
-        <div className='flex flex-row'>
-        <FaPen size={24} color='#9391ff' />
+        <div className='flex flex-row w-[20%] justify-center items-center gap-4'>
+          <Link to='/Login'>
+            <button className=' px-4 py-1 flex flex-shrink-0  h-10 justify-center border md:border-[1.6px] border-[#bbdefb] rounded-md w-full text-[#9391ff] font-normal md:font-medium'>Log in</button>
+          </Link>
+          <Link to='/Signup'>
+            <button className='w-full px-4 py-1 flex flex-shrink-0 h-10  justify-center  text-white rounded-md  bg-[#9391ff]  font-normal md:font-medium'>Sign up</button>
+          </Link>
         </div>
+        
       </div>
       </nav>
       
@@ -205,3 +212,4 @@ function Home() {
 }
 
 export default Home;
+
